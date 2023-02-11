@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <link rel="icon"
+        href="data:image/jpeg;base64,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"
+        type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body>
+    <div class="wrapper w-full bg-slate-200 h-full flex flex-col gap-2">
+
+        <!-- NAV BAR -->
+        <div class="bg-blue-600 h-16 w-full flex justify-center items-center">
+            <div class="w-3/4 h-16 flex justify-between items-center relative">
+
+                <div class="flex items-center gap-3">
+                    <img src="/assets/flipkarticon-bbc71e5c.png" alt="img" class="w-20">
+                    <input type="text" placeholder="Search for products,brands and more"
+                        class="w-[500px] rounded-sm h-8 pl-4 outline-blue-500">
+                    <i class="fa fa-search absolute left-[54%] text-blue-500 cursor-pointer"></i>
+                </div>
+                <div class="flex gap-10 items-center">
+                    <button class="bg-white text-blue-500 py-1 px-5 rounded-sm font-semibold">Login</button>
+                    <a href="#" class="text-white font-semibold">Become a seller</a>
+                    <div>
+                        <a href="#" class="text-white font-semibold">More </a>
+                        <i title="24*7 Customer Care"
+                            class='fas fa-angle-up rotate-180 hover:rotate-0 transition-all duration-200 text-white cursor-pointer'></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-shopping-cart text-white cursor-pointer"></i>
+                        <a href="#" class="text-white font-semibold ">Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ITEMS SECTION-->
+        <section class="w-full h-28 flex justify-center items-center bg-white">
+            <div class="w-3/4 flex items-center justify-between">
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/grocery-fb6a9211.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold">Grocery</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/mobiles-3fa44890.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold">Mobiles</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/fashion-591ee5a8.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold">Fashion</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/electronics-2fb9b993.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold">Electronics
+                    </figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/home-69be6ad4.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold">Home</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/appliances-1cd7d202.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold">Appliances
+                    </figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="./assets/cycles-26cd7e01.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold ">Travel</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/valentine-dd6ac288.jpg" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold text-center">Top
+                        Offers</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/toys-638cb6a3.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold text-center">Beauty &
+                        Toys</figcaption>
+                </figure>
+                <figure class="w-16 cursor-pointer group">
+                    <img src="/assets/home-69be6ad4.webp" alt="img">
+                    <figcaption class="text-black group-hover:text-blue-700 text-sm font-semibold text-center">Two
+                        Wheelers</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- AD Section  -->
+        <section class="h-64  w-full p-2 bg-white">
+            <div
+                class="bg-[url(./images/Flipkart-Upcoming-Sale.webp)] cursor-pointer bg-no-repeat bg-cover w-full h-full relative">
+                <i class="fa fa-angle-left text-4xl bg-white rounded-md py-6 px-3 absolute top-20 -left-1 z-0"></i>
+                <i class="fa fa-angle-right text-4xl bg-white rounded-md py-6 px-3 absolute top-20 -right-1 z-0"></i>
+            </div>
+        </section>
+
+        <!-- ELECTRONICS SECTION  -->
+        <section class="h-64 w-full p-2 bg-white">
+            <div class="relative w-full h-full bg-white flex items-center gap-4 bg-gradient-to-b">
+                <div class="flex flex-col items-center gap-2.5 px-8 py-6 bg-slate-200">
+                    <h2 class="text-2xl text-center">Best of <br> Electronics</h2>
+                    <button class="bg-blue-500 py-1 px-3 text-white rounded-sm text-sm font-semibold">VIEW ALL</button>
+                    <img src="/assets/bestof-46a9dbf6.webp" alt="img" class="w-20">
+                </div>
+                <div class="flex items-center flex-row justify-evenly w-full cursor-pointer">
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/camera-3ffdbee4.webp" alt="img"
+                                class="w-32 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Top Mirrorless Cameras</figcaption>
+                        </figure>
+                        <p class="text-green-600">Shop now!</p>
+                        <p class="text-sm text-slate-600">Canon,Sony,Fujifilm...</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="data:image/webp;base64,UklGRlgJAABXRUJQVlA4IEwJAABQOACdASrIAJoAPp1AnEgpJaQhrJMtkSATiWltIRrjAuS/5SxhtiWEdnV20zVoanJZWHPs/RLeF59UNXo+k+itAU938kxHAoseOORy/5y6AzQv/WqRLeel6d5Zw/5jdPZr+BE29n28VFqc2NdUWgdlzOmfr0FO4xM2ylJKj4+FtW9NDuCgXZHuy5UScc5Edapj2dE44H0/PPlcTyJVutgzJJWOdd8z9KufrjGi4pKqMb/riqa2aCUFEf4E7P3n64ROzdZFNLLDyzuINKi+B4F0dFsoK0ZIaM0x4/1KQbKw9BuRmNVXzbe/ungCWE16GohtLvAnvILxRzPOZ4iqYwqbLyVVLQlknhA+GOOcH9ApMYehn0LqoFvn7nqzUo7a+1L122YyYOW4UGYtsXKnNz9b/S8qGA2Qea5bVLOTkrMjjrsy50axt+c9NAT/yE70JTLDPoslLOFF3eVn+C29kZT3wy+cmTtr9/3B/OQmlCM8sbLGfEGfoZixVgRqoIsnJzL48/rZhIo6rUocYlOuV+tFxAlOG8P9rO3RMhJuNq0htikuVec1oTwuiVIo9oEFwotpZY+bYrvo0OmjTmRaI13ocXbHgluZZDcXYAAA/vzVHxQSA4P8ICl5pZhfLUb1l6gAtkWV71eZIsZczHWyKeh/lmFfTrHeDj6y80Y1K3silHRIWaxEEX+3RKxVmerMoLPlNyV2g2rXm8lXiTKNT8x0ufrfxGZyePdJioR8ng3r3W64g+qgwprV1k2ffpy6pci1s6Ny8znFiRPqGVlH8elJXLDvz6Xhq1MsMU5zn0jdSpTGs7G52kzBDbn2ThY3k8fySJfxGAn1uZ6WJxiQ8ltqEFa+Rlv+ucVO/23WuUU5lmuQ+jOcSWKTwLXDptZUiDzUHOVIS+wfgjxjeFcqcQltLr20x59FNEfTJqu6tJDdfo5lJESnZpVvD2luDuac0Ponph/TfeGaND95j5YvAUmxu71PxqFdz6rtevEXWD9ldMrqtfmT2zhXiJlilgoJdkjsxxPWW+GPloLCZ2EdS2zLwejK7uPshCgKzfrKV2Qlbd/Mr9GY5pZ0tIUJFkuK4vknUCLtvIqyKfAJy+OcRNxHO/KM2dPYBhY8eNBjcVgR+Ra5nr7/LK2MIj1GTOEMBT7Lf11Et+BSHBT04gasDPmOgwRbANQok8yFyDcWPDTZRo7Zsxgl0BrqxSvzbFSBA5vgIQdkyq68OOvi2pwyQ23ybw8tHkbWofc72vt22f4Q2gYpJagU9mN2s0DtPRGx6ezyKjwLYj6F1QJ14RwinbEnxtZn3FQf9U+QR9fb09txraLSyENjSGpfin3q4fahmdh2shkE0aZIwnzHxfbXBeFStwb4ku+apomiul7ktv0pt5BNzUH4qMU6zzDoWhaPvDVHxsWKebEauFRvHECSx1Z6jmiohN9t7crsQp0+7BBFiiTDTi+KxXTKASfhZYCZ4lMtpOcfTW0Uhk+ownfNaZ6W+LHMOTv4ySMb3u1N9Clo3N6N3IcZc8EGvc6ThsTBNMj3x3h1aTu67L+HaIAciO/+YAzRzd+eTMQHuouB7EmybphobhZcgTwX3JrnHGel+h1o9F0Q8+FtsTSdGE/y3vbEX5EizlyVznf6m1SNoVPGfLLE+Yf0HiIMgLFA7Fhsh7GRpTPFAK1GuVVxmXZClZHZ000G1jK1OjEuchC6ChTRt+AvRMYTHl1jsEoje4p3i5uHN0RBaYuwdSAGUSWsLR2wGFJ6eK6olWmxOQBB5MC/JxQjq5+gYWzaVozkIDE6zvQ9L/v+P2xXrcijqWlMAkEqmZzkaAU0u/HoUTs9JJgGwS67lITXoaqonj6Lj19sJ2YAwuHlClcKFB4poQoZtFLiSWfAPiyMv7xMcZxz8UXCjIf0tPR/cAzHgGaMrE+Z30AvTFf3wu0QSP82uYcVTjxhUkGbGO/1ApdVqlZ0MhlyBZSc/M+Jk76Am8BFUL2bdqBW5NtwWq9nxxY4KLJ21UoNYYAI7pgmmUNtOn/12BALYP6cKObD0nMbz85PuoJAntL+eEnnY4Z7b9/YyxiBkOcaSfar1RxWWDBFQberlodV4fPfZrLxvKaOL9IE7QswgxvxH+SI24qXSCR3d19dGHXUXV2hjfru4cQYI933IilylJZOwYW8cbMAw3D3dgjA1RfcZS91Ez+zf6Th+kg/BWbfQiDKxy8fSLZIT7EttMwyWtaPwoAA3A4XORtS4uSqyo5xO24tKb4LO+hfPbDC0RxXdOuJHEWQ1+g4KOMyjrfss8G4CM9CeK65PU/bK3AfBsTPDgXXSBXr3hoSX5d4IciZzctzEWY5ChNHb7vMl2Pu6d9HYa5KOjXhdXKhz17KaiyohD9bIJhZzOvaEzdLu+zckQXiOGWC9GApOdW/MFzz/73VGKyO1pRMrSiXbaAOJyg9a2kG7t64TVAMFtiDAh4O46vIESLPf0RQzeodEdWiShbQoOT1mSjyY6lkCFWCg49Z+5KlKq8JQhOJbC5xVNFHEe9d/ufhg0lEYtWlr/p8PB4mydcoGt2uMfl3Vl1352ti9UPBVbFw7BP0Utif3fw/eKcR6ll/OMmHn5TZ9zsWy5pYpmRW0qpu172BrkXRo795KeSugzCfeh4jR3m7BMcsXycCxANBcUvv0aE146+snwlnIwRZu1c96Ze9m5H2VLv4fJQHq3Kuj3KbUojNXKC9dgr80my+wj9NzdFFgWlfB5MukzMSeowsyNuk3d5fbSoOxd8dQnbruioreY6Fb/mVXEQWjavSwscmOQUFNJ/SNLkxbVCSwr58OwooJ9bCe+ihffvnu1TwkyiYZmWfiEmd5CwRtLiLJJvL4NGnEDE+fEebO8Dsa/wcCghOdawg09yRuCwDPQjjr3w4O1/PMtVHsjNwyITOCpVni7zKM6Wbt+y5jQksTzpIXWB++xQ4L5u6EClieO42W1It7H5I5tX7C7zxHukBgBiTJ6XKbRZjTrrDH0dIRYlSxYRbCKJCR6KVSQWDqULhE0B8Q72gQOWRys1Ej4+s+WydtgZHXk+w2OUer4a76RFgt2jsNzwjEQnKSVKbkgjZwogJ8LQQD18pZtvQt/On5d5btDjo/o6mHsUi5h7wYykSAYhdSkhpd/UfVU4kv36edKwpWsE3Mv5dRg5KPnAiHsbkcAAA"
+                                alt="img" class="w-36 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Printers</figcaption>
+                        </figure>
+                        <p class="text-green-600">From &#8377;2336</p>
+                        <p class="text-sm text-slate-600">HP</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="data:image/webp;base64,UklGRpIGAABXRUJQVlA4IIYGAADQJgCdASpJAMgAPp1GnEupJaOio/INmSATiWcA1OmnZ2H9Z0zAo9CaRwtgAAdVTq7+Bddr889gT+X/3D1kv9XzAvowflOcfybA9QC1XN/DHiNkWWsST48TV7+wrfETGhO5j2ICHLmN3mstnvdsbA9eAXEiDubXn3FCyyHULAnaCllkBjsa4hb+mWIo2c5DEPyIXORt+cja6IMTjfVFu2tmT4l+5gsilz82Y7/quVEKku8CcRdS/+WDhWY2XQzrasWtGjUPiogCIUfdB/KXCb3TxikFLWkGXZ2RO/gW9Wr25aFVsZKoMFjkcemn9Pfjyb52IYxkp9UzuMFgL5EbazGSqei5YW7KbpcaTk/EgjWiesYrQOmELelsX0lAha7F9eMINPwzanCidEwNSU1/la3RAks6VarqkTpR7OOiM2tAAP78E+6xaXo5hTBbxuEfqO0qdMyF/LygHbQueXD7/jvjmsJi55MNiFL9IXdwUQ/FYoWMIp1VsBpi4163W/ATpmafkfWCqc1Ix6ywXPKEqiWpfhuDm2iy7zVppBzO1JfPGZdKrKL+KqATf09xmtAyIZ49MAeXAWWe9mm4Vc/JPnTwTr/i/K5jgyaU4TBCPVFlAjXBixy/EpIY57/bmbIzq2nsZJTSncs83a9HfgXZ44uD8coe9naXkoMhKY/ClExzC49DJkwrIOhPcWPiTZ1Acl9vtBi7tspfhcHyle1pnOMXSnUZBUzkPURkUOPhXK9d0baJAVioX6EnmF/d8lkKhWrEvW4s5kX1LC5mJN9OKTBTgs2eOfaISnJ5I6+bDGUOhMNMst/Be5wcFGP7PbJ9d3UNfYNj+vIyCw8uMfrbEOExAsXE8b7wnfQPnrfqHACUI7AfsanE1NrRZ+xFIH9CfryGlzvxoyH8o7GfMQi4NtTRe5ka1LV7w2uffnHEJQ0N59ML72sNbmBrlc3vgdKt0KcMkbr4Or6fOdN+Ec4UP2GDRYcqHikyZgUyjRpTFUXPErzSkncq6JnYE/39LrnsDwKUKRDsY+wTeJythahfN54BDPq+K1o+FuuvbaOIsn9q/IgpoG8wdV+OitKNGlLdAHlYTO/2TnOLOmLiDywgoktNEtOxTO/DWoPvU1qbfQ6M6Rh4hA580WXXMmrBHEFoRT/eA++auT48TN0l4mx9cB2nWKmpZFC7H2Dksndw2108UtK2DwDNC8ZJninrz2HZ+Hi1GVAKiMoD4M/oKtcUmcn6LJzV3pDKmamStwE3jW1FwRb8bs5YwnINcceb9sWmFuUs2BSLQULwwcYw+0WVWrxU36+L0fs4EGEiO0bt6g0mOMcnF4nkL4zifz8I4kl2IZh4/SlHXoxk/9OPZVgCsjAdD3o9KroJ0gnFFChqRpPxWTPuLQqnBa1bKJC1kzP1lZxJNxpOJE/qbOr/w7fnuIXCA5q2/HoEkrfJ8+NwkfPOd/gLTsk0DyAFJ0kIfkwecf+EOfEtMnkeejgxhkGCMPOFvQvGxU1Qxp31TaTMT3p+BdBjwkLy+cr4f92JG3kYkqXgWGilQJUcSEP+peuxDKNXASFrVZ0Duo6oKtts6nvTAoADkmenuT/bIvCOJLJEK4GaPtUrU5aNrdZTF/55IPI4xamYh42fKlQA9fzjxklihR1rzf6VrG8a4FQQB0ayRHtirwbqAnYtNFobSTXjwFB6YNP7rAXm5bTOdeAQ5DqvYNAxWrTiFbcrERFQtdBzCqKgUEeIYTKzuo2A0GXunGWnpOrxxqGj+geLl3gowwhMM6ccbVOCCLXMWt8nI7UrlI+X16O+o0y6O/f7cJ1hOufx+3lYzkvN4k41Rme7oixgFuymH2rtb+86u0KhYwuni/fFM3nGUdUn9cZeOz/3qugkuJ6a9OA+lVJabosxsm56mDWzu7xMaH5XJRgqoAOEpS8P+Ygt+m9BremOEnFhuFLsG9OVQf+CCqCcQSn6IlzRk+aiZ1fsuopQqBI4u9flVJEBlnwoLoqwFZ4B4/I6t5sjfBQoBelROv7d2LAqXe958sS53k7p3zoQLv0Yc7AlqE5jo/SxCufTvFfbYFfhhaKSJuFxKrCP0YfIfgRHol//yahVPQWy4VBWNtJCvkQpM+0v22Ku/WfzCQ67L7gYrUkL9CiQifKFimfA6f3zXPcg70BMK7e+ZgaMZFWMJVv8JgeQmBkLwd6d/y/y79GS2YYiHv//ELr23kcLfV8+x1ZFKOSCegAAAA=="
+                                alt="img" class="w-36 h-32 object-contain hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Best of Shavers</figcaption>
+                        </figure>
+                        <p class="text-green-600">From &#8377;1649</p>
+                        <p class="text-sm text-slate-600">Philips & Havells</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/monitors-a5c7ccbd.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Monitors</figcaption>
+                        </figure>
+                        <p class="text-green-600">From &#8377;6599</p>
+                        <p class="text-sm text-slate-600">SAMSUNG</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="data:image/webp;base64,UklGRogCAABXRUJQVlA4IHwCAADQFACdASpnAMgAPp1InEspJiOiqjLJ8SATiWkABEM/JO+WAv6EwTTro5OtdItPUGm1DHwqV1WDEcJFIPtNESdoXhhLFINBMfXXNbM37NPDSFGeNWECooEhZBj5rYRJm8wpnI9KrGbxTJKpILHN0HzEqh6suHJcaVQ9WdxH4wY4fGLPxtzDnk0GLn2QoUZ5zxD5p78Z69jWyFEQmiSubPOjFs4IQSZxtoRC9KmdDwAAAP76raLm+Xe0NpaTB+3DFwQ6Wy3RkEEjE1YwDZs48rTE0OWYDMISIQ69Jss3RZtucvadZAw72bpix+1RNyexvV55w0rsENRmdo+bPDVtwT6GmVW37gqBdy0TP1nK4a1DygmaR7Sgt04UpvBx5jRO097NLHUdxUGJ5z8L+Zg48hFzcOteJYrRMKVtyZ15tW8oQEwmkIPD8faAkEurDs+L5z+46Jxmt87YMyc7Z5VyI7U5VYcwB6xKfhyxAJBok0pISuAgOlKm0Y6EVX7hY6zwRUb/AQ9QILr3+bqQLKGx7eSMfd+un8w1FqwziebSFRbJ3ZqwcHmzvcsIB7bST/LJXmJ1OEswLLaQljkMM1zxpyvz2cahT28uuHI4sZNH1PonWJk5jfMtL+zpBhIyjMtByd8wRwluGMfYRYRKk3PGy0BydMm58CVVYLSufRCr/fJfIWHD69T82svrUdLnRkdxbXx8a4U1G0EkGQYTqajZHfxIfv2p/VC6fhz4ZBGQQJh14/UVCqbYkQSBouK/t8zoGMH1bdMckuSM4auD1Zjg61V2CqOShkleIWDdQ/9iappr9Q7eBaKJuMgjyK6z3eAK8AuHo7T2ji96wmygAAA="
+                                alt="img" class="w-36 hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Premium PowerBanks</figcaption>
+                        </figure>
+                        <p class="text-green-600">Shop now</p>
+                        <p class="text-sm text-slate-600">Mi,relme & more</p>
+                    </div>
+
+                </div>
+                <i class="fa fa-angle-right text-4xl bg-white rounded-md py-6 px-3 absolute  -right-1 z-0"></i>
+            </div>
+        </section>
+
+        <!-- TOYS AND MORE SECTION  -->
+        <section class="h-64 w-full p-2 bg-white">
+            <div class="relative w-full h-full bg-white flex items-center gap-4 bg-gradient-to-b">
+                <div class="flex flex-col items-center gap-2.5 px-6 py-3 bg-slate-200">
+                    <h2 class="text-2xl text-center">Beauty,Food <br> Toys & More</h2>
+                    <button class="bg-blue-500 py-1 px-3 text-white rounded-sm text-sm font-semibold">VIEW ALL</button>
+                    <img src="/assets/toys-638cb6a3.webp" alt="img" class="w-20 h-16">
+                </div>
+                <div class="flex items-center flex-row justify-evenly w-full cursor-pointer">
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="data:image/webp;base64,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"
+                                alt="img" class="w-32 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Studio Headphones</figcaption>
+                        </figure>
+                        <p class="text-green-600">Up to 80% 0ff</p>
+                        <p class="text-sm text-slate-600">Explore Now!</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="data:image/webp;base64,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"
+                                alt="img" class="w-36 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Soft Toys</figcaption>
+                        </figure>
+                        <p class="text-green-600">Upto 70% off</p>
+                        <p class="text-sm text-slate-600">Stuffed Toys,Plush Toys & More</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/cycles-26cd7e01.webp" alt="img"
+                                class="w-36 object-contain hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Premium Non-Geared Cycles</figcaption>
+                        </figure>
+                        <p class="text-green-600">Upto 40% off</p>
+                        <p class="text-sm text-slate-600">Hercules,Hero & More</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/microphones-14581439.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Microphones</figcaption>
+                        </figure>
+                        <p class="text-green-600">Upto 70% off</p>
+                        <p class="text-sm text-slate-600">Explore Now!</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/footballs-ae97c77d.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Premium Footballs</figcaption>
+                        </figure>
+                        <p class="text-green-600">Upto 60% off</p>
+                        <p class="text-sm text-slate-600">Nivia,Cosco & More</p>
+                    </div>
+
+                </div>
+                <i class="fa fa-angle-right text-4xl bg-white rounded-md py-6 px-3 absolute  -right-1 z-0"></i>
+            </div>
+        </section>
+
+        <!-- VALENTINE SECTION  -->
+        <section class="h-64 w-full p-2 bg-white">
+            <div class="relative w-full h-full bg-white flex items-center gap-4 bg-gradient-to-b">
+                <div class="flex flex-col items-center gap-2.5 px-6 py-3 bg-slate-200">
+                    <h2 class="text-2xl text-center">Shop for Your<br>Valentine</h2>
+                    <button class="bg-blue-500 py-1 px-3 text-white rounded-sm text-sm font-semibold">VIEW ALL</button>
+                    <img src="/assets/valentine-dd6ac288.jpg" alt="img" class="w-20">
+                </div>
+                <div class="flex items-center flex-row justify-evenly w-full cursor-pointer">
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/flower-e1aa32d4.webp" alt="img"
+                                class="w-32 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Fresh Flowers</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% 0ff</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/watches-332008f9.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Wrist Watches</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 90% off</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="data:image/webp;base64,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"
+                                alt="img" class="w-36  hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Women's Dresses</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% off</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/shaving-80c0d9c9.webp" alt="img"
+                                class="w-36 hover:scale-105 h-32 object-contain transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Shaving & Beard Care</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% off</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/smartdevices-0d388803.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Wearable Smart Devices</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 40% off</p>
+
+                    </div>
+
+                </div>
+                <i class="fa fa-angle-right text-4xl bg-white rounded-md py-6 px-3 absolute  -right-1 z-0"></i>
+            </div>
+        </section>
+
+        <!-- MONTHLY ESSENTIALS SECTION  -->
+        <section class="h-64 w-full p-2 bg-white">
+            <div class="relative w-full h-full bg-white flex items-center gap-4 bg-gradient-to-b">
+                <div class="flex flex-col items-center gap-2.5 px-6 py-3 bg-slate-200">
+                    <h2 class="text-2xl text-center">Shop Monthly<br>Essentials</h2>
+                    <button class="bg-blue-500 py-1 px-3 text-white rounded-sm text-sm font-semibold">VIEW ALL</button>
+                    <!-- <img src="valentine.jpg" alt="img" class="w-20"> -->
+                </div>
+                <div class="flex items-center flex-row justify-evenly w-full cursor-pointer">
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/makeup-e5d96a6a.webp" alt="img"
+                                class="w-32 hover:scale-105 transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Makeup</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% 0ff</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/fragrances-aa51cb11.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Fragrances</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% off</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/mosquitokiller-a12b8691.webp" alt="img"
+                                class="w-36  hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Mosquito Killers</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% off</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/airfreshner-7cfdbd61.webp" alt="img"
+                                class="w-36 hover:scale-105 h-32 object-contain transition-all duration-200">
+                            <figcaption class="text-sm font-semibold mt-4">Car Air Fresheners</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% off</p>
+
+                    </div>
+                    <div class="flex flex-col gap-2 text-center">
+                        <figure>
+                            <img src="/assets/foodproducts-7b56d6d4.webp" alt="img"
+                                class="w-36 hover:scale-105 transition-all duration-200 h-32 object-contain">
+                            <figcaption class="text-sm font-semibold mt-4">Food Products</figcaption>
+                        </figure>
+                        <p class="text-green-600">Min 50% off</p>
+
+                    </div>
+
+                </div>
+                <i class="fa fa-angle-right text-4xl bg-white rounded-md py-6 px-3 absolute  -right-1 z-0"></i>
+            </div>
+        </section>
+
+        <!-- DESCRIPTION SECTION  -->
+        <section class="w-full  p-4 bg-white">
+            <div class="flex flex-col bg-white text-justify space-y-4">
+                <div class="text-sm"><b class="text-slate-800">Top Stories:</b><strong> Brand Directory</strong></div>
+                <div class="overflow-hidden text-sm space-y-2">
+
+                    <!-- PRE tag is used for short time taking purpose  -->
+                    <pre class="text-slate-700">
+<b class="text-slate-700">MOST SEARCHED ON FLIPKART: </b>Flipkart Axis Bank Super Elite Credit cardPrimebook LaptopsBounce Infinity E1Buy Laptop on EMIInfinix Zero Book UltraOPPO Reno8 5GOPPO Reno8 Pro 5GBouquetInfinix ZERO BOOK ULTRA Series LaptopSell Old Mobile PhonesASUS TUF Gaming F15 Core i5 10th GenElectronics StoreOPPO A16KVivo Y33TOPPO Reno7 5GOkaya Electric Vehiclesbgauss electric scooterOPPO Reno7 Pro 5GiPhone 13iPhone 13 ProiPhone 13 Pro MaxiPhone 13 MiniGoogle Pixel 6a coversFlipkart QuickAmpere MagnusFlipkart Help CentreOnline Boat StoreCovers from Rs 99Flipkart Track OrdersFlipkart Manage OrdersFlipkart Return OrdersFlipkart Gift Cards StoreFlipkart Axis Bank Credit CardFlipkart Pay Later
+<b class="text-slate-700">MOBILES: </b>iPhone 12 64GBiPhone 12 Pro 512GBiPhone 12 128GBVivo Y91iVivo Y11Vivo Y15Vivo Y50Vivo Y12Reno2 FOppo A12Oppo F15Oppo A31Samsung A71Samsung A51Samsung A31Realme X2iPhone 11iPhone 11 ProiPhone 11 Pro MaxMobile Offersiphone x4G MobileNokia MobileSamsung MobileiphoneOppo MobileVivo Mobile
+<b class="text-slate-700">CAMERA: </b>GoPro Action CameraNikon CameraCanon CameraSony CameraCanon DSLRNikon DSLR
+<b class="text-slate-700">LAPTOPS: </b>MacBook Pro M2Premium Laptopacer Ryzen 3 Dual Core 3250U - (8 GB/256 GB SSD/Windows 11 Home) Z2-493 Thin and Light LaptopASUS Vivobook S14 OLED (2022)ASUS Zenbook 14 OLED (2022)Realme Book Prime Core i5 11th GenMicrosoft Surface Go Pentium 128GBBranded LaptopsApple LaptopsAcer LaptopsLenovo LaptopsDell LaptopsAsus LaptopsHP LaptopsGaming Laptops2 in 1 LaptopsLaptopsDell latest laptops 2022HP latest laptops 2022Infinix INBook X1 Neo Series Celeron Quad Core - (8 GB/256 GB SSD/Windows 11 Home) XL22 Thin and Light LaptopMicrosoft Laptops12th Gen Intel Core Laptops
+<b class="text-slate-700">TVS: </b>Nokia TVPanasonic TVThomson TVVu TVRealme TVMotorola TVOnePlus TVsLG TVTVSony TVSamsung TVAndroid TelevisionIffalcon TvMi TV
+<b class="text-slate-700">LARGE APPLIANCES: </b>TV & Appliances End of Season SaleTelevisionWashing MachinesRefrigeratorsAir ConditionersElectric CookersElectric Jug(Heater) / Travel KettlesInduction CooktopsInverters / stabilizerIrons / Iron BoxMixer Grinder JuicerWet GrindersChimneysMicrowave OvensVacuum CleanersWater PurifierFanMarQ Customer Care
+<b class="text-slate-700">CLOTHING: </b>Men ShirtsKurta PajamaKurtasMen T-ShirtsJeansSareeDressesKids DressesDesigner Salwar SuitsBraDesigner KurtisTrack PantMen KurtasGym WearParty DressesPalazzo SuitsBoys ClothingGlovesNightyMaxi DressesAnarkaliGownsCulottesSalwar SuitsKurtisDesigner SareesLeggingsShortsGeorgette SareesEthnic WearBriefs & TrunksNike WatchesAscot TieCorset Tops TunicsLeather PU SkirtsCorset tops camisolesWomen magenta earringsNo collar jacketsGreen dress materialBlack patiala kurta setMen camel shoes casualBlack pathaniTassel SareesKhaki dressesKids formal dressesMauve shirtsWomen henleyuppada pattu sareesLeopard dressesSleeveless shrugs
+<b class="text-slate-700">FOOTWARE: </b>ShoesAdidas ShoesReebok ShoesNike ShoesPuma ShoesBootsBata ShoesWoodland ShoesSkechers ShoesSneakersWomens BootsSports ShoesLoafersSandalsLotto Sports ShoesCasual ShoesWomens Skechers ShoesAsics Sports ShoesFormal ShoesSchool Shoes
+<b class="text-slate-700">GROCERY: </b>PhonePe Grocery VoucherHand WashSoapCashew NutsSunflower OilEggsToilet CleanerHarpic Toilet CleanerDettol SoapMustard OilBiscuitsCheesePatanjali AttaFortune OilAashirvaad AttaTea
+BEST SELLING ON FLIPKART Fire-Boltt Ninja Calling Pro Bluetooth Calling Smartwatch 1.69 inch HD Display SmartwatchBest Gas GeyserKitchen GeyserNutri BlendersPortable Air CoolerBest Air CoolerBagsHitachi Refrigerator 3 DoorBooksToysCandlesHelmetsWall ClocksBaby FoodChocolatesCyclesCalculatorsLipsticksMaskVertiv UPSFastrack WatchesWalletsEarringsGold CoinsRealme Pad MiniHandbagsconekt SW2 SmartwatchMivi DuoPods a350Speaker Cleaner
+<b class="text-slate-700">FURNITURE: </b>FurnitureSofasBedsDining setsWardrobesMattressesTV UnitsTablesChairsShelvesBean BagsOffice ChairsComputer TableOffice TablesRed SofaWakefit BedsWhite SofaWakefit MattressGreen SofaBlack SofaBrown Sofa
+<b class="text-slate-700">BGMH: </b>Whey ProteinHomeopathyBounce InfinityValentine Gift for BoyfriendValentine Gift for GirlfriendValentine day giftChristmas GiftsCalendar 2023Online GuitarBooks StoreMusical Instrument StoreDabur ChyawanprashBaidyanath ChyawanprashEnergy DrinksToysMilk Drink MixesRakhiChyawanprashIndian FlagProtein Supplements
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION  -->
+        <section class="w-full h-full bg-slate-500 p-4">
+            <div class="  flex flex-row w-full justify-between">
+                <div class="flex flex-col gap-2 ">
+                    <p class="text-slate-900 text-sm">ABOUT</p>
+                    <a href="#" class="group relative text-white text-sm">Contact Us <div
+                            class="hidden h-0.5 w-16 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">About Us <div
+                            class="hidden h-0.5 w-14 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Careers<div
+                            class="hidden h-0.5 w-12 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Flipkart Stories<div
+                            class="hidden h-0.5 w-24 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Press<div
+                            class="hidden h-0.5 w-8 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Flipkart<div
+                            class="hidden h-0.5 w-12 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Wholesale<div
+                            class="hidden h-0.5 w-16 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Corporate<div
+                            class="hidden h-0.5 w-16 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Information<div
+                            class="hidden h-0.5 w-16 bg-white absolute top-5 group-hover:block"></div> </a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-slate-900 text-sm">HELP</p>
+                    <a href="#" class="group relative text-white text-sm">Payments<div
+                            class="hidden h-0.5 w-14 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Shipping<div
+                            class="hidden h-0.5 w-14 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Careers<div
+                            class="hidden h-0.5 w-12 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Cancellation & Returns<div
+                            class="hidden h-0.5 w-24 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">FAQ<div
+                            class="hidden h-0.5 w-6 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Report<div
+                            class="hidden h-0.5 w-10 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Infringement<div
+                            class="hidden h-0.5 w-20 bg-white absolute top-5 group-hover:block"></div> </a>
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-slate-900 text-sm">POLICY</p>
+                    <a href="#" class="group relative text-white text-sm">Return Policy<div
+                            class="hidden h-0.5 w-20 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Terms Of Use<div
+                            class="hidden h-0.5 w-20 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Security<div
+                            class="hidden h-0.5 w-12 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">privacy<div
+                            class="hidden h-0.5 w-10 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Sitemap<div
+                            class="hidden h-0.5 w-12 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">EPR Compliance<div
+                            class="hidden h-0.5 w-24 bg-white absolute top-5 group-hover:block"></div> </a>
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-slate-900 text-sm">SOCIAL</p>
+                    <a href="#" class="group relative text-white text-sm">Facebook<div
+                            class="hidden h-0.5 w-14 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">Twitter<div
+                            class="hidden h-0.5 w-10 bg-white absolute top-5 group-hover:block"></div> </a>
+                    <a href="#" class="group relative text-white text-sm">YouTube<div
+                            class="hidden h-0.5 w-14 bg-white absolute top-5 group-hover:block"></div> </a>
+
+                </div>
+                <div class="inline-block h-56 w-0.5 bg-slate-700"></div>
+                <div>
+                    <p class="text-slate-900">Mail Us:</p>
+
+                    <!-- PRE tag is used for short time taking purpose  -->
+                    <pre class="text-white text-sm">Flipkart Internet Private Limited,
+Buildings Alyssa, Begonia &
+Clove Embassy Tech Village,
+Outer Ring Road, Devarabeesanahalli Village,
+Bengaluru, 560103,
+Karnataka, India</pre>
+                </div>
+                <div>
+                    <p class="text-slate-900">Registered Office Address:</p>
+                    <pre class="text-white text-sm">Flipkart Internet Private Limited,
+Buildings Alyssa, Begonia &
+Clove Embassy Tech Village,
+Outer Ring Road, Devarabeesanahalli Village,
+Bengaluru, 560103,
+Karnataka, India
+CIN : U51109KA2012PTC066107
+Telephone: 044-45614700</pre>
+
+                </div>
+
+            </div>
+            <div class="bg-slate-500 h- w-full h-full pt-5">
+                <hr class=" border-slate-900">
+                <div class="flex flex-row justify-between items-center p-5 text-white">
+                    <a href="#">Become a Seller</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Gift Cards</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">&copy;2007-2023 Flipkart.com</a>
+                    <img src="/assets/payment-method_69e7ec-0939d697.svg" alt="" class="w-30">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
